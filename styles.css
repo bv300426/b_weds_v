@@ -1,12 +1,12 @@
 :root {
-  --bg: #f6cdd4;
-  --panel: #f8d4d8;
-  --text: #7a2f3e;
-  --muted: rgba(122, 47, 62, 0.78);
-  --line: rgba(184, 97, 117, 0.24);
-  --accent: #d68a2c;
-  --accent-deep: #a2485e;
-  --shadow: 0 24px 70px rgba(140, 74, 90, 0.18);
+  --bg: #120c0d;
+  --panel: #1b1215;
+  --text: #f2e7d9;
+  --muted: rgba(242, 231, 217, 0.78);
+  --line: rgba(214, 168, 106, 0.18);
+  --accent: #d9a652;
+  --accent-deep: #d8b98b;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
   --temple-srirangam: url("assets/temple-srirangam.jpg");
   --temple-samayapuram: url("assets/temple-samayapuram.jpg");
   --temple-rockfort: url("assets/temple-rockfort.jpg");
@@ -27,8 +27,8 @@ body {
   color: var(--text);
   font-family: "Cormorant Garamond", serif;
   background-image:
-    radial-gradient(circle at top, rgba(255, 245, 222, 0.75), transparent 28%),
-    linear-gradient(180deg, #f8dce1 0%, #f6c9cf 35%, #f6d899 100%);
+    radial-gradient(circle at top, rgba(112, 78, 33, 0.18), transparent 28%),
+    linear-gradient(180deg, #130c0d 0%, #1a1014 45%, #201612 100%);
 }
 
 body::before {
@@ -36,8 +36,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.18), transparent 45%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(182, 78, 100, 0.08));
+    radial-gradient(circle at center, rgba(255, 234, 198, 0.08), transparent 45%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.18));
   pointer-events: none;
   z-index: 2;
 }
@@ -61,14 +61,14 @@ a {
   padding: 2rem 1.25rem;
   border-bottom: 1px solid var(--line);
   background:
-    linear-gradient(180deg, rgba(255, 239, 242, 0.82), rgba(247, 210, 217, 0.9));
+    linear-gradient(180deg, rgba(26, 17, 20, 0.88), rgba(19, 13, 15, 0.94));
 }
 
 .panel::before {
   content: "";
   position: absolute;
   inset: 1rem;
-  border: 2px solid rgba(214, 138, 44, 0.22);
+  border: 1px solid rgba(217, 166, 82, 0.24);
   border-radius: 28px;
   z-index: 0;
   pointer-events: none;
@@ -78,7 +78,7 @@ a {
   content: "";
   position: absolute;
   inset: 1.7rem;
-  border: 1px solid rgba(162, 72, 94, 0.12);
+  border: 1px solid rgba(255, 237, 204, 0.08);
   border-radius: 22px;
   z-index: 0;
   pointer-events: none;
@@ -95,14 +95,14 @@ a {
   background-size: cover;
   transform: scale(1.08);
   transition: transform 7s ease, opacity 1.2s ease;
-  opacity: 0.24;
-  filter: saturate(1) brightness(1) sepia(0.1);
+  opacity: 0.3;
+  filter: saturate(0.88) brightness(0.46) sepia(0.14);
 }
 
 .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(255, 244, 225, 0.34), rgba(247, 206, 127, 0.1)),
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.24), transparent 62%);
+    linear-gradient(180deg, rgba(9, 6, 7, 0.26), rgba(0, 0, 0, 0.58)),
+    radial-gradient(circle at center, rgba(217, 166, 82, 0.08), transparent 62%);
 }
 
 .panel-content {
@@ -117,8 +117,9 @@ a {
   padding: 2.4rem 1.6rem;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 242, 222, 0.7), rgba(249, 221, 227, 0.8));
+    linear-gradient(180deg, rgba(24, 16, 18, 0.72), rgba(19, 13, 15, 0.82));
   box-shadow: var(--shadow);
+  border: 1px solid rgba(217, 166, 82, 0.12);
 }
 
 .panel.is-visible .panel-content {
@@ -136,7 +137,7 @@ a {
   letter-spacing: 0.28em;
   font-size: 0.72rem;
   text-transform: uppercase;
-  color: var(--accent-deep);
+  color: rgba(216, 185, 139, 0.84);
 }
 
 h1,
@@ -149,6 +150,7 @@ h2 {
 h1 {
   font-size: clamp(3.6rem, 17vw, 7.8rem);
   letter-spacing: 0.03em;
+  text-wrap: balance;
 }
 
 .nowrap {
@@ -161,6 +163,7 @@ h1 span {
 
 h2 {
   font-size: clamp(3rem, 14vw, 5.8rem);
+  text-wrap: balance;
 }
 
 .body-copy {
@@ -175,7 +178,7 @@ h2 {
   margin: 1.25rem 0 0;
   font-family: "Allura", cursive;
   font-size: clamp(1.9rem, 8vw, 3.4rem);
-  color: var(--accent-deep);
+  color: rgba(216, 185, 139, 0.92);
 }
 
 .map-link {
@@ -190,15 +193,16 @@ h2 {
   font-size: 0.82rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  background: rgba(255, 249, 240, 0.8);
+  background: rgba(255, 248, 233, 0.08);
+  color: var(--text);
   backdrop-filter: blur(8px);
   transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
 .map-link:hover,
 .map-link:focus-visible {
-  background: rgba(255, 244, 225, 0.96);
-  border-color: rgba(162, 72, 94, 0.36);
+  background: rgba(255, 248, 233, 0.14);
+  border-color: rgba(217, 166, 82, 0.34);
   transform: translateY(-2px);
 }
 
@@ -217,8 +221,8 @@ h2 {
 .panel-ornaments span {
   width: 12px;
   border-radius: 999px;
-  background: linear-gradient(180deg, #ffcf4d, #ef8d18);
-  box-shadow: 0 0 0 3px rgba(255, 224, 165, 0.22);
+  background: linear-gradient(180deg, #f0c66b, #c98522);
+  box-shadow: 0 0 0 3px rgba(217, 166, 82, 0.14);
 }
 
 .panel-ornaments span:nth-child(1) { height: 72px; }
@@ -229,35 +233,35 @@ h2 {
 
 .panel-intro .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
+    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
     var(--temple-srirangam);
   background-position: center 30%;
 }
 
 .panel-message .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
+    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
     var(--temple-samayapuram);
   background-position: center center;
 }
 
 .panel-date .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
+    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
     var(--temple-rockfort);
   background-position: center center;
 }
 
 .panel-venue .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(255, 243, 214, 0.16), rgba(189, 97, 64, 0.14)),
+    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
     var(--temple-gopuram);
   background-position: center center;
 }
 
 .panel-closing .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
+    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
     var(--temple-srirangam);
   background-position: center top;
 }
@@ -267,14 +271,14 @@ h2 {
 .panel-date .panel-overlay,
 .panel-closing .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(255, 251, 242, 0.24), rgba(247, 196, 155, 0.16)),
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.24), transparent 58%);
+    linear-gradient(180deg, rgba(8, 6, 6, 0.3), rgba(0, 0, 0, 0.56)),
+    radial-gradient(circle at center, rgba(217, 166, 82, 0.1), transparent 58%);
 }
 
 .panel-venue .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(255, 251, 242, 0.18), rgba(232, 183, 102, 0.14)),
-    radial-gradient(circle at center, rgba(255, 236, 190, 0.22), transparent 55%);
+    linear-gradient(180deg, rgba(8, 6, 6, 0.26), rgba(0, 0, 0, 0.52)),
+    radial-gradient(circle at center, rgba(217, 166, 82, 0.12), transparent 55%);
 }
 
 @media (min-width: 700px) {
@@ -308,11 +312,55 @@ h2 {
 }
 
 @media (max-width: 520px) {
+  .panel {
+    padding: 1.25rem 0.85rem;
+  }
+
   .panel-content {
-    padding: 2rem 1.1rem;
+    width: min(94vw, 420px);
+    padding: 2rem 1rem 1.75rem;
+  }
+
+  h1 {
+    font-size: clamp(2.7rem, 13vw, 4.2rem);
+    line-height: 1.02;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 11vw, 3.3rem);
+    line-height: 1.02;
+  }
+
+  .body-copy {
+    max-width: 20ch;
+    font-size: 1.12rem;
+  }
+
+  .overline {
+    letter-spacing: 0.18em;
+    font-size: 0.68rem;
   }
 
   .panel-ornaments {
-    width: min(88vw, 360px);
+    top: 0.8rem;
+    width: min(82vw, 300px);
+  }
+
+  .panel-ornaments span {
+    width: 9px;
+  }
+
+  .panel-ornaments span:nth-child(1) { height: 46px; }
+  .panel-ornaments span:nth-child(2) { height: 62px; }
+  .panel-ornaments span:nth-child(3) { height: 78px; }
+  .panel-ornaments span:nth-child(4) { height: 62px; }
+  .panel-ornaments span:nth-child(5) { height: 46px; }
+
+  .panel::before {
+    inset: 0.7rem;
+  }
+
+  .panel::after {
+    inset: 1.15rem;
   }
 }
