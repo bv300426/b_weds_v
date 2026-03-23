@@ -1,11 +1,12 @@
 :root {
-  --bg: #050505;
-  --panel: #0d0d0d;
-  --text: #f4ede3;
-  --muted: rgba(244, 237, 227, 0.72);
-  --line: rgba(255, 255, 255, 0.08);
-  --accent: #d7c1a0;
-  --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  --bg: #f6cdd4;
+  --panel: #f8d4d8;
+  --text: #7a2f3e;
+  --muted: rgba(122, 47, 62, 0.78);
+  --line: rgba(184, 97, 117, 0.24);
+  --accent: #d68a2c;
+  --accent-deep: #a2485e;
+  --shadow: 0 24px 70px rgba(140, 74, 90, 0.18);
   --temple-srirangam: url("assets/temple-srirangam.jpg");
   --temple-samayapuram: url("assets/temple-samayapuram.jpg");
   --temple-rockfort: url("assets/temple-rockfort.jpg");
@@ -25,6 +26,9 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "Cormorant Garamond", serif;
+  background-image:
+    radial-gradient(circle at top, rgba(255, 245, 222, 0.75), transparent 28%),
+    linear-gradient(180deg, #f8dce1 0%, #f6c9cf 35%, #f6d899 100%);
 }
 
 body::before {
@@ -32,8 +36,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 38%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.42));
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.18), transparent 45%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(182, 78, 100, 0.08));
   pointer-events: none;
   z-index: 2;
 }
@@ -56,14 +60,26 @@ a {
   isolation: isolate;
   padding: 2rem 1.25rem;
   border-bottom: 1px solid var(--line);
-  background: var(--panel);
+  background:
+    linear-gradient(180deg, rgba(255, 239, 242, 0.82), rgba(247, 210, 217, 0.9));
 }
 
 .panel::before {
   content: "";
   position: absolute;
   inset: 1rem;
-  border: 1px solid rgba(215, 193, 160, 0.16);
+  border: 2px solid rgba(214, 138, 44, 0.22);
+  border-radius: 28px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: 1.7rem;
+  border: 1px solid rgba(162, 72, 94, 0.12);
+  border-radius: 22px;
   z-index: 0;
   pointer-events: none;
 }
@@ -79,14 +95,14 @@ a {
   background-size: cover;
   transform: scale(1.08);
   transition: transform 7s ease, opacity 1.2s ease;
-  opacity: 0.62;
-  filter: saturate(0.95) brightness(0.78) sepia(0.18);
+  opacity: 0.24;
+  filter: saturate(1) brightness(1) sepia(0.1);
 }
 
 .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.62)),
-    radial-gradient(circle at center, rgba(255, 215, 160, 0.12), transparent 58%);
+    linear-gradient(180deg, rgba(255, 244, 225, 0.34), rgba(247, 206, 127, 0.1)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.24), transparent 62%);
 }
 
 .panel-content {
@@ -98,6 +114,11 @@ a {
   transform: translateY(32px) scale(0.98);
   transition: opacity 1s ease, transform 1s ease;
   will-change: opacity, transform;
+  padding: 2.4rem 1.6rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 242, 222, 0.7), rgba(249, 221, 227, 0.8));
+  box-shadow: var(--shadow);
 }
 
 .panel.is-visible .panel-content {
@@ -115,7 +136,7 @@ a {
   letter-spacing: 0.28em;
   font-size: 0.72rem;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent-deep);
 }
 
 h1,
@@ -154,7 +175,7 @@ h2 {
   margin: 1.25rem 0 0;
   font-family: "Allura", cursive;
   font-size: clamp(1.9rem, 8vw, 3.4rem);
-  color: #f5dfc2;
+  color: var(--accent-deep);
 }
 
 .map-link {
@@ -163,55 +184,80 @@ h2 {
   justify-content: center;
   margin-top: 1.6rem;
   padding: 0.8rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(162, 72, 94, 0.24);
   border-radius: 999px;
   font-family: "Cinzel", serif;
   font-size: 0.82rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 249, 240, 0.8);
   backdrop-filter: blur(8px);
   transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 
 .map-link:hover,
 .map-link:focus-visible {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 244, 225, 0.96);
+  border-color: rgba(162, 72, 94, 0.36);
   transform: translateY(-2px);
 }
 
+.panel-ornaments {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(84vw, 520px);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.panel-ornaments span {
+  width: 12px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffcf4d, #ef8d18);
+  box-shadow: 0 0 0 3px rgba(255, 224, 165, 0.22);
+}
+
+.panel-ornaments span:nth-child(1) { height: 72px; }
+.panel-ornaments span:nth-child(2) { height: 96px; }
+.panel-ornaments span:nth-child(3) { height: 120px; }
+.panel-ornaments span:nth-child(4) { height: 96px; }
+.panel-ornaments span:nth-child(5) { height: 72px; }
+
 .panel-intro .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.48)),
+    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
     var(--temple-srirangam);
-  background-position: center 35%;
+  background-position: center 30%;
 }
 
 .panel-message .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5)),
+    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
     var(--temple-samayapuram);
   background-position: center center;
 }
 
 .panel-date .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5)),
+    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
     var(--temple-rockfort);
   background-position: center center;
 }
 
 .panel-venue .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.58)),
+    linear-gradient(180deg, rgba(255, 243, 214, 0.16), rgba(189, 97, 64, 0.14)),
     var(--temple-gopuram);
   background-position: center center;
 }
 
 .panel-closing .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.56)),
+    linear-gradient(180deg, rgba(255, 243, 214, 0.14), rgba(189, 97, 64, 0.12)),
     var(--temple-srirangam);
   background-position: center top;
 }
@@ -221,14 +267,14 @@ h2 {
 .panel-date .panel-overlay,
 .panel-closing .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(8, 24, 16, 0.16), rgba(0, 0, 0, 0.62)),
-    radial-gradient(circle at center, rgba(130, 170, 120, 0.18), transparent 58%);
+    linear-gradient(180deg, rgba(255, 251, 242, 0.24), rgba(247, 196, 155, 0.16)),
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.24), transparent 58%);
 }
 
 .panel-venue .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(35, 20, 10, 0.16), rgba(0, 0, 0, 0.64)),
-    radial-gradient(circle at center, rgba(255, 210, 150, 0.16), transparent 55%);
+    linear-gradient(180deg, rgba(255, 251, 242, 0.18), rgba(232, 183, 102, 0.14)),
+    radial-gradient(circle at center, rgba(255, 236, 190, 0.22), transparent 55%);
 }
 
 @media (min-width: 700px) {
@@ -258,5 +304,15 @@ h2 {
   .panel-content,
   .map-link {
     transition: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .panel-content {
+    padding: 2rem 1.1rem;
+  }
+
+  .panel-ornaments {
+    width: min(88vw, 360px);
   }
 }
