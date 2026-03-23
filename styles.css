@@ -6,7 +6,7 @@
   --line: rgba(255, 255, 255, 0.08);
   --accent: #d7c1a0;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-  --temple-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiruttani_Murugan_temple.jpg");
+  --temple-image: url("assets/murugan-temple.jpg");
 }
 
 * {
