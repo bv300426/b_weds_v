@@ -128,10 +128,11 @@ a {
   padding: 2rem 2rem 2.15rem;
   border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(24, 18, 17, 0.34), rgba(16, 12, 12, 0.44));
+    linear-gradient(180deg, rgba(24, 18, 17, 0.26), rgba(16, 12, 12, 0.36));
   border: 1px solid rgba(242, 231, 217, 0.14);
   backdrop-filter: blur(10px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  transform: translateY(2.4rem);
 }
 
 .panel.is-visible .panel-content {
@@ -191,6 +192,7 @@ h1 {
 .hero-inline-ampersand {
   display: inline-block;
   margin: 0 0.26rem 0 0.16rem;
+  font-size: 0.84em;
 }
 
 .hero-line {
@@ -269,7 +271,7 @@ h2 {
   background-image:
     linear-gradient(180deg, rgba(14, 12, 10, 0.04), rgba(14, 12, 10, 0.04)),
     var(--murugan-hero);
-  background-position: center 18%;
+  background-position: center 10%;
   opacity: 0.74;
   filter: saturate(1.02) brightness(0.72) sepia(0.02);
 }
@@ -367,6 +369,7 @@ h2 {
     width: min(92vw, 420px);
     padding: 1.55rem 1rem 1.5rem;
     border-radius: 12px;
+    transform: translateY(1.2rem);
   }
 
   h1 {
