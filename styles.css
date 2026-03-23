@@ -112,7 +112,7 @@ a {
 .panel-content {
   position: relative;
   z-index: 1;
-  width: min(92vw, 720px);
+  width: min(84vw, 600px);
   text-align: center;
   opacity: 0;
   transform: translateY(32px) scale(0.98);
@@ -127,7 +127,7 @@ a {
 }
 
 .intro-card {
-  width: min(60vw, 620px);
+  width: min(56vw, 520px);
   padding: 1.55rem 1.6rem 1.7rem;
   border-radius: 14px;
   background:
@@ -401,12 +401,12 @@ h2 {
   }
 
   .panel-content {
-    width: min(94vw, 420px);
+    width: min(86vw, 340px);
     padding: 2rem 1rem 1.75rem;
   }
 
   .intro-card {
-    width: min(82vw, 340px);
+    width: min(78vw, 300px);
     padding: 1.3rem 0.95rem 1.35rem;
     border-radius: 12px;
     transform: translateY(2.4rem);
