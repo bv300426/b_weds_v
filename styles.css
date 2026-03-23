@@ -12,6 +12,7 @@
   --temple-rockfort: url("assets/temple-rockfort.jpg");
   --temple-gopuram: url("assets/temple-gopuram.jpg");
   --murugan-hero: url("https://upload.wikimedia.org/wikipedia/commons/4/49/Murugan_Temple_Gopuram.jpg");
+  --temple-rameswaram: url("https://commons.wikimedia.org/wiki/Special:FilePath/Rameswaram%20Temple%20Corridor.jpg");
 }
 
 * {
@@ -96,8 +97,8 @@ a {
   background-size: cover;
   transform: scale(1.08);
   transition: transform 7s ease, opacity 1.2s ease;
-  opacity: 0.42;
-  filter: saturate(1.02) brightness(0.62) sepia(0.06);
+  opacity: 0.5;
+  filter: saturate(1.08) brightness(0.72) sepia(0.03);
 }
 
 .panel-overlay {
@@ -296,24 +297,26 @@ h2 {
     linear-gradient(180deg, rgba(18, 12, 8, 0.06), rgba(18, 12, 8, 0.06)),
     var(--temple-samayapuram);
   background-position: center 32%;
-  opacity: 0.58;
-  filter: saturate(1.08) brightness(0.76) sepia(0.03);
+  opacity: 0.64;
+  filter: saturate(1.12) brightness(0.82) sepia(0.02);
 }
 
 .panel-date .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(18, 12, 8, 0.06), rgba(18, 12, 8, 0.06)),
-    var(--temple-rockfort);
-  background-position: center 24%;
-  opacity: 0.56;
-  filter: saturate(1.1) brightness(0.74) sepia(0.03);
+    var(--temple-gopuram);
+  background-position: center 18%;
+  opacity: 0.64;
+  filter: saturate(1.14) brightness(0.82) sepia(0.02);
 }
 
 .panel-venue .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
-    var(--temple-gopuram);
-  background-position: center center;
+    linear-gradient(180deg, rgba(18, 12, 8, 0.04), rgba(18, 12, 8, 0.04)),
+    var(--temple-rameswaram);
+  background-position: center 40%;
+  opacity: 0.66;
+  filter: saturate(1.08) brightness(0.8) sepia(0.02);
 }
 
 .panel-closing .panel-bg {
@@ -321,8 +324,8 @@ h2 {
     linear-gradient(180deg, rgba(18, 12, 8, 0.06), rgba(18, 12, 8, 0.06)),
     var(--temple-srirangam);
   background-position: center 20%;
-  opacity: 0.56;
-  filter: saturate(1.08) brightness(0.74) sepia(0.03);
+  opacity: 0.62;
+  filter: saturate(1.12) brightness(0.8) sepia(0.02);
 }
 
 .panel-intro .panel-overlay,
@@ -330,8 +333,8 @@ h2 {
 .panel-date .panel-overlay,
 .panel-closing .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(10, 8, 7, 0.2), rgba(0, 0, 0, 0.42)),
-    radial-gradient(circle at center, rgba(226, 178, 92, 0.14), transparent 58%);
+    linear-gradient(180deg, rgba(10, 8, 7, 0.14), rgba(0, 0, 0, 0.32)),
+    radial-gradient(circle at center, rgba(226, 178, 92, 0.16), transparent 58%);
 }
 
 .panel-intro .panel-overlay {
@@ -342,8 +345,8 @@ h2 {
 
 .panel-venue .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(8, 6, 6, 0.26), rgba(0, 0, 0, 0.52)),
-    radial-gradient(circle at center, rgba(217, 166, 82, 0.12), transparent 55%);
+    linear-gradient(180deg, rgba(8, 6, 6, 0.16), rgba(0, 0, 0, 0.3)),
+    radial-gradient(circle at center, rgba(217, 166, 82, 0.16), transparent 55%);
 }
 
 @media (min-width: 700px) {
