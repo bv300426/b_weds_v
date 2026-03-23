@@ -128,10 +128,10 @@ a {
   padding: 2rem 2rem 2.15rem;
   border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(24, 18, 17, 0.26), rgba(16, 12, 12, 0.36));
-  border: 1px solid rgba(242, 231, 217, 0.14);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    linear-gradient(180deg, rgba(24, 18, 17, 0.18), rgba(16, 12, 12, 0.28));
+  border: 1px solid rgba(242, 231, 217, 0.12);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
   transform: translateY(2.4rem);
 }
 
@@ -170,8 +170,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
-  line-height: 0.9;
+  gap: 0.05rem;
+  line-height: 0.88;
 }
 
 .hero-title-inline {
@@ -185,14 +185,9 @@ h1 {
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.14);
 }
 
-.hero-title-inline span {
-  color: inherit;
-}
-
 .hero-inline-ampersand {
-  display: inline-block;
-  margin: 0 0.26rem 0 0.16rem;
-  font-size: 0.84em;
+  margin: -0.1rem 0;
+  font-size: clamp(3.2rem, 6.2vw, 4.6rem);
 }
 
 .hero-line {
@@ -236,10 +231,16 @@ h2 {
 
 .hero-invite {
   margin: 1.35rem auto 0;
-  max-width: 20ch;
+  max-width: 34ch;
+  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.1rem, 2.1vw, 1.34rem);
   line-height: 1.55;
   color: rgba(236, 223, 207, 0.82);
+}
+
+.panel-content h2,
+.signature {
+  font-family: "Great Vibes", cursive;
 }
 
 .map-link {
@@ -383,12 +384,13 @@ h2 {
   }
 
   .hero-inline-ampersand {
-    margin: 0 0.08rem;
+    margin: -0.06rem 0;
+    font-size: clamp(2.3rem, 9vw, 3.2rem);
   }
 
   .hero-invite {
-    max-width: 18ch;
-    font-size: 1.02rem;
+    max-width: 100%;
+    font-size: 0.92rem;
     line-height: 1.5;
   }
 
