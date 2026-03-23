@@ -122,6 +122,16 @@ a {
   border: 1px solid rgba(217, 166, 82, 0.12);
 }
 
+.intro-card {
+  width: min(90vw, 760px);
+  padding: 3rem 2.25rem 2.6rem;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(21, 14, 16, 0.62), rgba(16, 11, 13, 0.74));
+  border: 1px solid rgba(217, 166, 82, 0.18);
+  backdrop-filter: blur(10px);
+}
+
 .panel.is-visible .panel-content {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -151,6 +161,25 @@ h1 {
   font-size: clamp(3.6rem, 17vw, 7.8rem);
   letter-spacing: 0.03em;
   text-wrap: balance;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  line-height: 0.9;
+}
+
+.hero-line {
+  display: block;
+}
+
+.hero-ampersand {
+  display: block;
+  font-size: clamp(3rem, 11vw, 5.2rem);
+  line-height: 0.9;
+  color: var(--accent);
 }
 
 .nowrap {
@@ -206,36 +235,13 @@ h2 {
   transform: translateY(-2px);
 }
 
-.panel-ornaments {
-  position: absolute;
-  top: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(84vw, 520px);
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.panel-ornaments span {
-  width: 12px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #f0c66b, #c98522);
-  box-shadow: 0 0 0 3px rgba(217, 166, 82, 0.14);
-}
-
-.panel-ornaments span:nth-child(1) { height: 72px; }
-.panel-ornaments span:nth-child(2) { height: 96px; }
-.panel-ornaments span:nth-child(3) { height: 120px; }
-.panel-ornaments span:nth-child(4) { height: 96px; }
-.panel-ornaments span:nth-child(5) { height: 72px; }
-
 .panel-intro .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
     var(--temple-srirangam);
   background-position: center 30%;
+  opacity: 0.46;
+  filter: saturate(0.92) brightness(0.58) sepia(0.1);
 }
 
 .panel-message .panel-bg {
@@ -273,6 +279,12 @@ h2 {
   background:
     linear-gradient(180deg, rgba(8, 6, 6, 0.3), rgba(0, 0, 0, 0.56)),
     radial-gradient(circle at center, rgba(217, 166, 82, 0.1), transparent 58%);
+}
+
+.panel-intro .panel-overlay {
+  background:
+    linear-gradient(180deg, rgba(8, 6, 6, 0.18), rgba(0, 0, 0, 0.42)),
+    radial-gradient(circle at center, rgba(217, 166, 82, 0.08), transparent 58%);
 }
 
 .panel-venue .panel-overlay {
@@ -321,6 +333,12 @@ h2 {
     padding: 2rem 1rem 1.75rem;
   }
 
+  .intro-card {
+    width: min(92vw, 420px);
+    padding: 2.1rem 1rem 1.8rem;
+    border-radius: 20px;
+  }
+
   h1 {
     font-size: clamp(2.7rem, 13vw, 4.2rem);
     line-height: 1.02;
@@ -340,21 +358,6 @@ h2 {
     letter-spacing: 0.18em;
     font-size: 0.68rem;
   }
-
-  .panel-ornaments {
-    top: 0.8rem;
-    width: min(82vw, 300px);
-  }
-
-  .panel-ornaments span {
-    width: 9px;
-  }
-
-  .panel-ornaments span:nth-child(1) { height: 46px; }
-  .panel-ornaments span:nth-child(2) { height: 62px; }
-  .panel-ornaments span:nth-child(3) { height: 78px; }
-  .panel-ornaments span:nth-child(4) { height: 62px; }
-  .panel-ornaments span:nth-child(5) { height: 46px; }
 
   .panel::before {
     inset: 0.7rem;
