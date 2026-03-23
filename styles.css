@@ -6,7 +6,9 @@
   --line: rgba(255, 255, 255, 0.08);
   --accent: #d7c1a0;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-  --temple-image: url("assets/murugan-temple.jpg");
+  --temple-green-1: url("assets/temple-green-1.jpg");
+  --temple-green-2: url("assets/temple-green-2.jpg");
+  --temple-gopuram: url("assets/temple-gopuram.jpg");
 }
 
 * {
@@ -176,37 +178,52 @@ h2 {
 
 .panel-intro .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.5)),
-    var(--temple-image);
-  background-position: center;
+    linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.48)),
+    var(--temple-green-1);
+  background-position: center center;
 }
 
 .panel-message .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.58)),
-    var(--temple-image);
-  background-position: 55% center;
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5)),
+    var(--temple-green-2);
+  background-position: center center;
 }
 
 .panel-date .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.56)),
-    var(--temple-image);
-  background-position: 48% center;
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5)),
+    var(--temple-green-1);
+  background-position: 58% center;
 }
 
 .panel-venue .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.62)),
-    var(--temple-image);
-  background-position: 52% center;
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.58)),
+    var(--temple-gopuram);
+  background-position: center center;
 }
 
 .panel-closing .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    var(--temple-image);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.56)),
+    var(--temple-green-2);
   background-position: center top;
+}
+
+.panel-intro .panel-overlay,
+.panel-message .panel-overlay,
+.panel-date .panel-overlay,
+.panel-closing .panel-overlay {
+  background:
+    linear-gradient(180deg, rgba(8, 24, 16, 0.16), rgba(0, 0, 0, 0.62)),
+    radial-gradient(circle at center, rgba(130, 170, 120, 0.18), transparent 58%);
+}
+
+.panel-venue .panel-overlay {
+  background:
+    linear-gradient(180deg, rgba(35, 20, 10, 0.16), rgba(0, 0, 0, 0.64)),
+    radial-gradient(circle at center, rgba(255, 210, 150, 0.16), transparent 55%);
 }
 
 @media (min-width: 700px) {
