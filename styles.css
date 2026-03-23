@@ -6,8 +6,9 @@
   --line: rgba(255, 255, 255, 0.08);
   --accent: #d7c1a0;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-  --temple-green-1: url("assets/temple-green-1.jpg");
-  --temple-green-2: url("assets/temple-green-2.jpg");
+  --temple-srirangam: url("assets/temple-srirangam.jpg");
+  --temple-samayapuram: url("assets/temple-samayapuram.jpg");
+  --temple-rockfort: url("assets/temple-rockfort.jpg");
   --temple-gopuram: url("assets/temple-gopuram.jpg");
 }
 
@@ -183,22 +184,22 @@ h2 {
 .panel-intro .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.48)),
-    var(--temple-green-1);
-  background-position: center center;
+    var(--temple-srirangam);
+  background-position: center 35%;
 }
 
 .panel-message .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5)),
-    var(--temple-green-2);
+    var(--temple-samayapuram);
   background-position: center center;
 }
 
 .panel-date .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.5)),
-    var(--temple-green-1);
-  background-position: 58% center;
+    var(--temple-rockfort);
+  background-position: center center;
 }
 
 .panel-venue .panel-bg {
@@ -211,7 +212,7 @@ h2 {
 .panel-closing .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.56)),
-    var(--temple-green-2);
+    var(--temple-srirangam);
   background-position: center top;
 }
 
