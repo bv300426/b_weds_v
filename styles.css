@@ -11,6 +11,7 @@
   --temple-samayapuram: url("assets/temple-samayapuram.jpg");
   --temple-rockfort: url("assets/temple-rockfort.jpg");
   --temple-gopuram: url("assets/temple-gopuram.jpg");
+  --temple-greenery: url("assets/temple-green-1.jpg");
   --murugan-hero: url("https://upload.wikimedia.org/wikipedia/commons/4/49/Murugan_Temple_Gopuram.jpg");
   --temple-rameswaram: url("https://commons.wikimedia.org/wiki/Special:FilePath/Rameswaram%20Temple%20Corridor.jpg");
 }
@@ -295,8 +296,8 @@ h2 {
 .panel-message .panel-bg {
   background-image:
     linear-gradient(180deg, rgba(18, 12, 8, 0.06), rgba(18, 12, 8, 0.06)),
-    var(--temple-samayapuram);
-  background-position: center 32%;
+    var(--temple-greenery);
+  background-position: center 40%;
   opacity: 0.64;
   filter: saturate(1.12) brightness(0.82) sepia(0.02);
 }
