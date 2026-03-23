@@ -123,13 +123,14 @@ a {
 }
 
 .intro-card {
-  width: min(90vw, 760px);
-  padding: 3rem 2.25rem 2.6rem;
-  border-radius: 24px;
+  width: min(74vw, 760px);
+  padding: 2.15rem 2rem 2.1rem;
+  border-radius: 14px;
   background:
-    linear-gradient(180deg, rgba(21, 14, 16, 0.62), rgba(16, 11, 13, 0.74));
-  border: 1px solid rgba(217, 166, 82, 0.18);
-  backdrop-filter: blur(10px);
+    linear-gradient(180deg, rgba(23, 17, 16, 0.58), rgba(16, 12, 12, 0.68));
+  border: 1px solid rgba(242, 231, 217, 0.16);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
 }
 
 .panel.is-visible .panel-content {
@@ -171,6 +172,24 @@ h1 {
   line-height: 0.9;
 }
 
+.hero-title-inline {
+  display: block;
+  font-family: "Allura", cursive;
+  font-size: clamp(4rem, 8.3vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: #f7efe4;
+}
+
+.hero-title-inline span {
+  color: inherit;
+}
+
+.hero-inline-ampersand {
+  display: inline-block;
+  margin: 0 0.2rem 0 0.1rem;
+}
+
 .hero-line {
   display: block;
 }
@@ -210,6 +229,14 @@ h2 {
   color: rgba(216, 185, 139, 0.92);
 }
 
+.hero-invite {
+  margin: 1.35rem auto 0;
+  max-width: 17ch;
+  font-size: clamp(1.05rem, 2.2vw, 1.22rem);
+  line-height: 1.65;
+  color: rgba(242, 231, 217, 0.9);
+}
+
 .map-link {
   display: inline-flex;
   align-items: center;
@@ -237,11 +264,11 @@ h2 {
 
 .panel-intro .panel-bg {
   background-image:
-    linear-gradient(180deg, rgba(20, 12, 8, 0.12), rgba(20, 12, 8, 0.12)),
+    linear-gradient(180deg, rgba(18, 12, 10, 0.08), rgba(18, 12, 10, 0.08)),
     var(--temple-srirangam);
-  background-position: center 30%;
-  opacity: 0.46;
-  filter: saturate(0.92) brightness(0.58) sepia(0.1);
+  background-position: center 22%;
+  opacity: 0.62;
+  filter: saturate(0.95) brightness(0.64) sepia(0.06);
 }
 
 .panel-message .panel-bg {
@@ -283,8 +310,8 @@ h2 {
 
 .panel-intro .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(8, 6, 6, 0.18), rgba(0, 0, 0, 0.42)),
-    radial-gradient(circle at center, rgba(217, 166, 82, 0.08), transparent 58%);
+    linear-gradient(180deg, rgba(7, 8, 10, 0.3), rgba(6, 8, 10, 0.54)),
+    radial-gradient(circle at center, rgba(18, 14, 12, 0.18), transparent 56%);
 }
 
 .panel-venue .panel-overlay {
@@ -335,13 +362,28 @@ h2 {
 
   .intro-card {
     width: min(92vw, 420px);
-    padding: 2.1rem 1rem 1.8rem;
-    border-radius: 20px;
+    padding: 1.55rem 1rem 1.5rem;
+    border-radius: 12px;
   }
 
   h1 {
     font-size: clamp(2.7rem, 13vw, 4.2rem);
     line-height: 1.02;
+  }
+
+  .hero-title-inline {
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
+    line-height: 1;
+  }
+
+  .hero-inline-ampersand {
+    margin: 0 0.08rem;
+  }
+
+  .hero-invite {
+    max-width: 16ch;
+    font-size: 1rem;
+    line-height: 1.55;
   }
 
   h2 {
