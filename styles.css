@@ -112,7 +112,7 @@ a {
 .panel-content {
   position: relative;
   z-index: 1;
-  width: min(84vw, 600px);
+  width: min(78vw, 520px);
   text-align: center;
   opacity: 0;
   transform: translateY(32px) scale(0.98);
@@ -127,7 +127,7 @@ a {
 }
 
 .intro-card {
-  width: min(56vw, 520px);
+  width: min(50vw, 440px);
   padding: 1.55rem 1.6rem 1.7rem;
   border-radius: 14px;
   background:
@@ -231,6 +231,14 @@ h2 {
   font-family: "Allura", cursive;
   font-size: clamp(1.9rem, 8vw, 3.4rem);
   color: rgba(216, 185, 139, 0.92);
+}
+
+.closing-script {
+  margin: 1.1rem 0 0;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.1;
+  color: rgba(216, 185, 139, 0.9);
 }
 
 .hero-invite {
@@ -401,12 +409,12 @@ h2 {
   }
 
   .panel-content {
-    width: min(86vw, 340px);
+    width: min(80vw, 300px);
     padding: 2rem 1rem 1.75rem;
   }
 
   .intro-card {
-    width: min(78vw, 300px);
+    width: min(72vw, 260px);
     padding: 1.3rem 0.95rem 1.35rem;
     border-radius: 12px;
     transform: translateY(2.4rem);
