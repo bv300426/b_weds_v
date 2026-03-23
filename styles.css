@@ -6,7 +6,7 @@
   --line: rgba(255, 255, 255, 0.08);
   --accent: #d7c1a0;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
-  --temple-image: url("https://commons.wikimedia.org/wiki/Special:FilePath/Tiruttani%20Murugan%20temple.jpg");
+  --temple-image: url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Tiruttani_Murugan_temple.jpg");
 }
 
 * {
@@ -56,6 +56,15 @@ a {
   background: var(--panel);
 }
 
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px solid rgba(215, 193, 160, 0.16);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .panel-bg,
 .panel-overlay {
   position: absolute;
@@ -67,14 +76,14 @@ a {
   background-size: cover;
   transform: scale(1.08);
   transition: transform 7s ease, opacity 1.2s ease;
-  opacity: 0.42;
-  filter: saturate(0.88) brightness(0.62);
+  opacity: 0.62;
+  filter: saturate(0.95) brightness(0.78) sepia(0.18);
 }
 
 .panel-overlay {
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.7)),
-    radial-gradient(circle at center, rgba(255, 240, 220, 0.08), transparent 55%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.62)),
+    radial-gradient(circle at center, rgba(255, 215, 160, 0.12), transparent 58%);
 }
 
 .panel-content {
